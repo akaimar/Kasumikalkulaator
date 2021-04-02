@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ leheNimi }}</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+  <script src="./js/app.js" defer></script>
+</head>
+<body>
+  <div id="app">
+      <p class="h2">{{ leheNimi }}</p>
+      <form>
+        <div class="form-group">
+          <div class="">
+            <label for="ostuhind">Ostuhind</label>
+            <input type="number" :step="0.01" onclick="this.select()" v-model.number="ostuhind">
+          </div>
+          <div class="">
+            <label for="ostukogus">Ostukogus</label>
+            <input type="number" :step="0.01" onclick="this.select()" v-model.number="ostukogus">
+          </div>
+          <div class="">
+            <label for="myygihind">Müügihind</label>
+            <input type="number" :step="0.01" onclick="this.select()" v-model.number="myygihind">
+          </div>
+          <div class="">
+            <label for="myygikogus">Müügikogus</label>
+            <input type="number" :step="0.01" onclick="this.select()" v-model.number="myygikogus">
+          </div>
+          <div class="">
+            <label for="ostukulu">Ostukulu</label>
+            <input type="number":step="0.01"  onclick="this.select()" v-model.number="ostukulu">
+          </div>
+          <div class="">
+            <label for="myygikulu">Müügikulu</label>
+            <input type="number" :step="0.01" onclick="this.select()" v-model.number="myygikulu">
+          </div>
+          </div>
+          <div>
+            <button type="reset" class="btn btn-outline-secondary">Reset</button>
+          </div>
+      </form>
+      <div>
+          <p>{{ arvutaja }}</p>
+      </div>
+  </div>
+</body>
+</html>
